@@ -4,9 +4,9 @@ The project will expose the key elements of SPA (Single Page Application) withou
  
 ## Services
 
-    ### Dashboard
+    1. Dashboard
     Serving as a main menu for the webapp.
-    ### Prime Number Finder
+    2. Prime Number Finder
     Find the next prime in a given range one by one (prompting in between).
-    ### SIS Report Generator
+    3. SIS Report Generator
     Generate a report from a Student Information System filtered based on a name prefix, a major, and a minimum GPA. The output is sorted on a custom column.
