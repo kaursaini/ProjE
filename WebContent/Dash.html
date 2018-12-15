@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="res/e.js"></script>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" rel="stylesheet" />
+		
+	<title>Proj-E</title>
+</head>
+<body><div class="container">
+	<div id="dashDiv" class="view">
+	<h2>DashBoard</h2>
+	<ul>
+		<li><a href='javascript:showView("primeDiv")'>Prime Service</a></li>
+		<li><a href='javascript:showView("sisDiv")'>SiS Service</a></li>
+	</ul>
+	</div>
+
+	<div id="primeDiv" class="view">
+		<div class="page-header"><a href='javascript:showView("dashDiv")'>Dashboard</a></div>
+		<h2>Prime Service</h2>
+		<form id="primeForm" onsubmit="prime(this); return false;">
+			<div class="form-group"><label>Minimum Number: </label>
+				<input type="text" id="min" placeholder="Larger than ..."/>
+			</div>
+			<div class="form-group"><label>Maximum Number: </label>
+				<input type="text" id="max" placeholder="But not larger than" />
+			</div>
+			<div class="form-group"><input type="submit" value="Get Prime" onclick="clicked='calc'" /></div>
+			<div id="primeResult"></div>
+		</form>
+	</div>
+
+	<div id="sisDiv" class="view">
+		<div class="page-header"><a href='javascript:showView("dashDiv")'>Dashboard</a></div>
+		<h2>SIS Report Generator</h2>
+		<form id="sisForm" onsubmit="sis(this);return false;">
+			<div class="form-group"><label>Name Prefix:</label>
+				<input type="text" id="prefix" placeholder="Name Prefix"/></div>
+			<div class="form-group"><label>Minimum GPA:</label>
+				<input type="text" id="minGpa" placeholder="Minimum GPA"/></div>
+			<div class="form-group"><label>Sort By:</label>
+				<select id="sortBy">
+					<option value="NONE" selected>Select One:</option>
+					<option value="SURNAME">Last Name</option>
+					<option value="MAJOR">Major</option>
+					<option value="COURSES">Number of Courses</option>
+			</select></div>
+			<div class="form-group"><input type="submit" value="Generate Report"/></div>
+			<div id="sisResult"></div>
+		</form>
+	</div>
+
+</div></body>
+</html>
